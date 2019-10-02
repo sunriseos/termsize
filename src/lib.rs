@@ -31,6 +31,11 @@ mod win;
 #[cfg(windows)]
 pub use self::win::get;
 
+#[cfg(target_os = "sunrise")]
+mod sunrise;
+#[cfg(target_os = "sunrise")]
+pub use self::sunrise::get;
+
 #[cfg(test)]
 mod tests {
     use super::get;
